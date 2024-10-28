@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routine Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Daily Routine Tracker</h1>
+
+    <!-- Date Selector -->
+    <label for="date-picker">Select Date: </label>
+    <input type="date" id="date-picker" onchange="loadTasksByDate()">
+    
+    <div class="container">
+        <!-- To-Do Table Sections for each Category -->
+        <section class="todo-section">
+            <h2>Tasks</h2>
+            <table id="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Task</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks-table-body">
+                    <!-- Task Rows will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <h3>Add New Task</h3>
+            <select id="category-select">
+                <option value="study">Study</option>
+                <option value="exercise">Exercise</option>
+                <option value="leisure">Leisure</option>
+                <option value="extra">Extra To-Do</option>
+                <option value="quest">Regular Quest</option>
+            </select>
+            <input type="text" id="task-input" placeholder="Enter task">
+            <button id="add-task"onclick="addTask()">Add Task</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

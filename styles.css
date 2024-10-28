@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Responsive Title */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+/* Date Picker */
+label, input[type="date"] {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#add-task{
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    border: none;
+    background-color: #00ffea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Input and Select Styles */
+input[type="text"], select {
+    padding: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+/* Task section */
+.todo-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+    button {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    input[type="text"], select, input[type="date"] {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+}
+
+/* Extra-small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    h2, h3 {
+        font-size: 1rem;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    input[type="text"], select, input[type="date"] {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
