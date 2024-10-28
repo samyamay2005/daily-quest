@@ -1,4 +1,4 @@
-let tasks = JSON.parse(localStorage.getItem("tasks")) || {};  // Stores tasks by date
+let tasks = JSON.parse(localStorage.getItem("tasks")) || {};
 
 // Adds a task based on selected date and category
 function addTask() {
@@ -38,7 +38,7 @@ function loadTasksByDate() {
         row.innerHTML = `
             <td>${task.category}</td>
             <td contenteditable="true" onblur="editTask('${date}', ${index}, this)">${task.task}</td>
-            <td><button onclick="deleteTask('${date}', ${index})">Delete</button></td>
+            <td><button onclick="deleteTask('${date}', ${index})">Done</button></td>
         `;
     });
 }
@@ -52,7 +52,7 @@ function editTask(date, index, element) {
 // Delete a task based on date and index
 function deleteTask(date, index) {
     tasks[date].splice(index, 1);
-    if (tasks[date].length === 0) delete tasks[date];  // Remove date if no tasks left
+    if (tasks[date].length === 0) delete tasks[date];
     localStorage.setItem("tasks", JSON.stringify(tasks));
     loadTasksByDate();
 }
